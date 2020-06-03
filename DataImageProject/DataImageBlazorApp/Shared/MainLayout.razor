@@ -1,0 +1,146 @@
+@inherits LayoutComponentBase
+@using Syncfusion.Blazor.Buttons
+
+<div style="max-width:100vw;">
+    <div class="top-row px-3" style="z-index:1111;padding-top:0px;">
+        <div class="logoDiv">
+            <img src= "Assets\dark_logo_transparent_background.svg" alt="DataImage Logo" max-width="195" height="55"/>
+        </div>
+        <div class="resourcesDiv">
+            <SfButton @ref="ResourcesBtn" IsPrimary="true" CssClass="e-outline">Resources</SfButton>
+        </div>
+        <div class="clusterDiv">
+            <SfButton @ref="ClusterBtn" IsPrimary="true"  CssClass="e-outline">Cluster</SfButton>
+        </div>
+        <div class="consoleDiv">
+            <SfButton @ref="ConsoleBtn" IsPrimary="true" CssClass="e-outline">Console</SfButton>
+        </div>
+        <div class="signUpDiv">
+            <SfButton @ref="SignUpBtn" IsPrimary="true" CssClass="e-outline" Content=@contentSignUp></SfButton>
+        </div>
+        <div class="loginDiv">
+            <SfButton @ref="LogInBtn" IsPrimary="true" Content=@contentLogIn></SfButton>
+        </div>
+    </div>
+
+
+    <div class="content px-3" style="padding:0px 0px 0px 0px; margin:auto">
+        @Body
+    </div>
+    <div  class="footer">
+      
+        <p id="copyright" style="color:black; font-size:inherit" > <img src="/Assets/copyright.svg" /> dataimage.io</p>
+    </div>
+
+</div>
+
+
+<style>
+
+    html{
+        width:100vw;
+       
+    }
+    
+    .footer{
+        
+        background-color:white;
+       max-width:100vw;
+        height:50px; 
+        display:flex; 
+        justify-content:center;
+        align-items:center;
+        border-top:2px dashed #d3d1d1;
+    }
+    #copyright{
+        color: white;
+    }
+    .logoDiv{
+        margin-left:40px;
+        margin-right:100px;
+    }
+    .resourcesDiv{
+        margin-left:100px;
+        margin-right:10px;
+    }
+    .clusterDiv{
+        margin-left:10px;
+        margin-right:10px;
+    }
+    .consoleDiv{
+        margin-left:10px;
+        margin-right:200px;
+    }
+    .signUpDiv{
+        margin-left:200px;
+        margin-right:10px;
+    }
+    .loginDiv{
+        margin-left:10px;
+        margin-right:2px;
+    }
+
+
+</style>
+
+
+@code {
+
+    SfButton ResourcesBtn;
+    SfButton ClusterBtn;
+    SfButton ConsoleBtn;
+    SfButton SignUpBtn;
+    SfButton LogInBtn;
+
+    public string contentSignUp = "Sign Up";
+    public string contentLogIn = "Log In";
+
+    private void onClickSignUp(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        if (ResourcesBtn.Content == "Sign Up")
+        {
+            this.contentSignUp = "";
+        }
+        else
+        {
+            this.contentSignUp = "Play";
+        }
+    }
+    private void onClickLogIn(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        if (ResourcesBtn.Content == "Sign Up")
+        {
+            this.contentSignUp = "";
+        }
+        else
+        {
+            this.contentSignUp = "Play";
+        }
+    }
+    private void onClickResources(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        if (ResourcesBtn.Content == "SignUp")
+        {
+            this.contentSignUp = "";
+        }
+        else
+        {
+            this.contentSignUp = "Play";
+        }
+    }
+
+    private void onClickCluster(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        if (ResourcesBtn.Content == "SignUp")
+        {
+            this.contentSignUp = "";
+        }
+        else
+        {
+            this.contentSignUp = "Play";
+        }
+    }
+
+
+
+}

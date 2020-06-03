@@ -1,0 +1,89 @@
+﻿@inherits LayoutComponentBase
+@using Syncfusion.Blazor.Buttons
+
+<div class="main">
+    <div class="top-row px-3" style="z-index:1111;padding-top:0px">
+        <div class="btn">
+            <SfButton @ref="ResourcesBtn" IsPrimary="true" CssClass="e-outline">Resources</SfButton>
+        </div>
+        <div class="btn">
+            <SfButton @ref="ClusterBtn" IsPrimary="true" CssClass="e-outline">Cluster</SfButton>
+        </div>
+        <div class="btn">
+            <SfButton @ref="ConsoleBtn" IsPrimary="true" CssClass="e-outline">Console</SfButton>
+        </div>
+        <div class="btn">
+            <SfButton @ref="SignUpBtn" IsPrimary="true" CssClass="e-outline" Content=@contentSignUp></SfButton>
+        </div>
+        <div class="btn">
+            <SfButton @ref="LogInBtn" IsPrimary="true" Content=@contentLogIn></SfButton>
+        </div>
+    </div>
+
+    <div class="content px-3">
+        @Body
+    </div>
+</div>
+<style>
+</style>
+
+@code {
+
+    SfButton ResourcesBtn;
+    SfButton ClusterBtn;
+    SfButton ConsoleBtn;
+    SfButton SignUpBtn;
+    SfButton LogInBtn;
+
+    public string contentSignUp = "SignUp";
+    public string contentLogIn = "Log In";
+
+    private void onClickSignUp(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        if (ResourcesBtn.Content == "SignUp")
+        {
+            this.contentSignUp = "";
+        }
+        else
+        {
+            this.contentSignUp = "Play";
+        }
+    }
+    private void onClickLogIn(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        if (ResourcesBtn.Content == "SignUp")
+        {
+            this.contentSignUp = "";
+        }
+        else
+        {
+            this.contentSignUp = "Play";
+        }
+    }
+    private void onClickResources(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        if (ResourcesBtn.Content == "SignUp")
+        {
+            this.contentSignUp = "";
+        }
+        else
+        {
+            this.contentSignUp = "Play";
+        }
+    }
+
+    private void onClickCluster(Microsoft.AspNetCore.Components.Web.MouseEventArgs args)
+    {
+        if (ResourcesBtn.Content == "SignUp")
+        {
+            this.contentSignUp = "";
+        }
+        else
+        {
+            this.contentSignUp = "Play";
+        }
+    }
+
+
+
+}

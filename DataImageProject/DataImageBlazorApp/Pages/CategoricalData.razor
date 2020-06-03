@@ -1,0 +1,387 @@
+﻿@page "/categorical-data-clustering"
+@using Syncfusion.Blazor
+@using Syncfusion.Blazor.Inputs
+@using Syncfusion.Blazor.Buttons
+@using Syncfusion.Blazor.Cards
+
+
+<div style="display:flex; padding-top:75px; justify-content:center">
+    <div style="margin-right:10px; margin-left:auto; justify-content:center; padding-bottom:0px">
+
+        <div style="height:190px; width:260px; padding-top:10px;">
+            <SfCard ID="typescript">
+                <CardImage Image="/Assets/ClusterCircle.png" />
+                <CardHeader Title="Numeric Clustering" SubTitle="  Indicate Your Dataset Attributes" />
+                <CardContent Content="ASP.NET Model View Controller design pattern to keep the data, views, and logic clearly separated in apps." />
+                <CardFooter>
+                    <CardFooterContent>
+                        <SfButton CssClass="e-btn e-outline e-primary" @onclick="@(e =>NavigateToUrlAsync("https://www.syncfusion.com/ebooks/ASPNET_MVC_Succinctly"))">Read More</SfButton>
+                    </CardFooterContent>
+                </CardFooter>
+            </SfCard>
+
+
+        </div>
+
+    </div>
+    <div style="justify-content:center">
+        <div class="control-section card-control-section tile_layout">
+            <div class='row e-card-layout' style="margin: auto">
+                <div>
+                    <SfCard>
+
+                        <CardContent>
+                            @if (ShowTable)
+                            {
+                                <table style="line-height: 1.75em; width: 100%">
+
+                                    <tr>
+                                        <td>
+                                            <div class="card-text-value">
+                                                <b>Dataset Attributes: </b>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="card-text-value">Multi-demensional Dataset</div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            }
+                            else
+                            {
+                                <table style="line-height: 1.4em;">
+                                    <tr>
+                                        <td style="text-align:left">
+                                            <CardHeader Title="High-Dimensional Data"></CardHeader>
+                                        </td>
+                                        <td>
+                                            <div @onclick="ChangeTable">
+                                                <span class="e-icons e-collapse"></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">
+                                            Microsoft has done extensive work to make JavaScript easier to use. Microsoft TypeScript extends many features of .NET to JavaScript.
+                                        </td>
+                                    </tr>
+                                </table>
+                            }
+                        </CardContent>
+                        @if (ShowTable)
+                        {
+                            <CardFooter>
+                                <CardFooterContent>
+                                    <SfButton CssClass="e-btn e-outline e-primary" @onclick="ChangeTable">Know More</SfButton>
+                                    <SfCheckBox Checked="false"></SfCheckBox>
+                                </CardFooterContent>
+                            </CardFooter>
+                        }
+                    </SfCard>
+
+
+                </div>
+            </div>
+        </div>
+        <div style="display:flex">
+            <div class="control-section card-control-section tile_layout">
+                <div class='row e-card-layout' style="margin: auto">
+                    <div>
+                        <SfCard>
+
+                            <CardContent>
+                                @if (ShowTable1)
+                                {
+                                    <table style="line-height: 1.75em; width: 100%">
+
+                                        <tr>
+                                            <td>
+                                                <div class="card-text-value">
+                                                    <b>Dataset Attributes: </b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="card-text-value">Multi-demensional Dataset</div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                }
+                                else
+                                {
+                                    <table style="line-height: 1.4em;">
+                                        <tr>
+                                            <td style="text-align:left">
+                                                <CardHeader Title="High-Dimensional Data"></CardHeader>
+                                            </td>
+                                            <td>
+                                                <div @onclick="ChangeTable1">
+                                                    <span class="e-icons e-collapse"></span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="1">
+                                                Microsoft has done extensive work to make JavaScript easier to use. Microsoft TypeScript extends many features of .NET to JavaScript.
+                                            </td>
+                                        </tr>
+                                    </table>
+                                }
+                            </CardContent>
+                            @if (ShowTable1)
+                            {
+                                <CardFooter>
+                                    <CardFooterContent>
+                                        <SfButton CssClass="e-btn e-outline e-primary" @onclick="ChangeTable1">Know More</SfButton>
+                                        <SfCheckBox Checked="false"></SfCheckBox>
+                                    </CardFooterContent>
+                                </CardFooter>
+                            }
+                        </SfCard>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="control-section card-control-section tile_layout">
+            <div class='row e-card-layout' style="margin: auto">
+                <div>
+                    <SfCard>
+
+                        <CardContent>
+                            @if (ShowTable2)
+                            {
+                                <table style="line-height: 1.75em; width: 100%">
+
+                                    <tr>
+                                        <td>
+                                            <div class="card-text-value">
+                                                <b>Dataset Attributes: </b>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="card-text-value">Multi-demensional Dataset</div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            }
+                            else
+                            {
+                                <table style="line-height: 1.4em;">
+                                    <tr>
+                                        <td style="text-align:left">
+                                            <CardHeader Title="High-Dimensional Data"></CardHeader>
+                                        </td>
+                                        <td>
+                                            <div @onclick="ChangeTable2">
+                                                <span class="e-icons e-collapse"></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">
+                                            Microsoft has done extensive work to make JavaScript easier to use. Microsoft TypeScript extends many features of .NET to JavaScript.
+                                        </td>
+                                    </tr>
+                                </table>
+                            }
+                        </CardContent>
+                        @if (ShowTable2)
+                        {
+                            <CardFooter>
+                                <CardFooterContent>
+                                    <SfButton CssClass="e-btn e-outline e-primary" @onclick="ChangeTable2">Know More</SfButton>
+                                    <SfCheckBox Checked="false"></SfCheckBox>
+                                </CardFooterContent>
+                            </CardFooter>
+                        }
+                    </SfCard>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="control-section card-control-section tile_layout">
+            <div class='row e-card-layout' style="margin: auto">
+                <div>
+                    <SfCard>
+
+                        <CardContent>
+                            @if (ShowTable3)
+                            {
+                                <table style="line-height: 1.75em; width: 100%">
+
+                                    <tr>
+                                        <td>
+                                            <div class="card-text-value">
+                                                <b>Dataset Attributes: </b>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="card-text-value">Multi-demensional Dataset</div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            }
+                            else
+                            {
+                                <table style="line-height: 1.4em;">
+                                    <tr>
+                                        <td style="text-align:left">
+                                            <CardHeader Title="High-Dimensional Data"></CardHeader>
+                                        </td>
+                                        <td>
+                                            <div @onclick="ChangeTable3">
+                                                <span class="e-icons e-collapse"></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="1">
+                                            Microsoft has done extensive work to make JavaScript easier to use. Microsoft TypeScript extends many features of .NET to JavaScript.
+                                        </td>
+                                    </tr>
+                                </table>
+                            }
+                        </CardContent>
+                        @if (ShowTable3)
+                        {
+                            <CardFooter>
+                                <CardFooterContent>
+                                    <SfButton CssClass="e-btn e-outline e-primary" @onclick="ChangeTable3">Know More</SfButton>
+                                    <SfCheckBox Checked="false"></SfCheckBox>
+                                </CardFooterContent>
+                            </CardFooter>
+                        }
+                    </SfCard>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="padding-bottom:0px">
+        <div style="margin-left:10px; margin-right:auto; padding-top:75px; padding-bottom:0px; justify-content:center">
+            <div class="control_wrapper">
+                <SfUploader ID="UploadFiles" AllowedExtensions=".doc, .docx, .xls, .xlsx, .txt, .csv">
+                    <UploaderEvents OnRemove="OnFileRemove"></UploaderEvents>
+                    <UploaderAsyncSettings SaveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Save" RemoveUrl="https://aspnetmvc.syncfusion.com/services/api/uploadbox/Remove"></UploaderAsyncSettings>
+                </SfUploader>
+                <div class="btn" style="padding-left:15px;">
+                    <SfButton CssClass="e-success">Generate Clusters</SfButton>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+</div>
+
+<div class="row">
+    <SfCheckBox Checked="false" Label="CheckBox"></SfCheckBox>
+</div>
+<div class="row">
+    <SfCheckBox Disabled="true" Checked="true" Label="Checked, Disabled"></SfCheckBox>
+</div>
+
+<style>
+    .control_wrapper {
+        width: 350px;
+        margin: 0 auto;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
+
+    .e-card-image {
+        height: 180px;
+        width: 240px;
+    }
+
+    .card-text-value {
+        text-align: left;
+        font-weight: 500;
+    }
+
+    .tile_layout.card-control-section .row.filter .col-xs-6.col-sm-6.col-lg-6.col-md-6 {
+        display: inline-flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .tile_layout.card-control-section .col-xs-6.col-sm-6.col-lg-6.col-md-6 {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .card-control-section.tile_layout .e-card-layout {
+        margin: auto;
+        max-width: 350px;
+    }
+
+    .e-card-header {
+        padding-left: inherit !important;
+    }
+
+    .e-btn {
+        margin-left: 10px;
+    }
+
+    .e-card .e-card-header .e-card-header-caption .e-card-header-title {
+        font-weight: bold;
+    }
+
+    .e-collapse::before {
+        content: "\e745";
+    }
+</style>
+@code {
+
+
+    public void OnFileRemove(RemovingEventArgs args)
+    {
+        args.PostRawFile = false;
+    }
+
+    private bool ShowTable = true;
+    void ChangeTable()
+    {
+        ShowTable = !ShowTable;
+    }
+
+    private bool ShowTable1 = true;
+    void ChangeTable1()
+    {
+        ShowTable1 = !ShowTable1;
+    }
+
+    private bool ShowTable2 = true;
+    void ChangeTable2()
+    {
+        ShowTable2 = !ShowTable2;
+    }
+
+    private bool ShowTable3 = true;
+    void ChangeTable3()
+    {
+        ShowTable3 = !ShowTable3;
+    }
+
+    private bool ShowTable4 = true;
+    void ChangeTable4()
+    {
+        ShowTable4 = !ShowTable4;
+    }
+
+    public string clusteringPageType = "";
+
+
+    [Inject] public NavigationManager NavigationManager { get; set; }
+    [Inject] public IJSRuntime JsRuntime { get; set; }
+    public async Task NavigateToUrlAsync(string url)
+    {
+        await JsRuntime.InvokeAsync<object>("open", url, "_blank");
+    }
+}

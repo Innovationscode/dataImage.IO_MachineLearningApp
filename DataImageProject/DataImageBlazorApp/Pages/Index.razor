@@ -1,0 +1,245 @@
+@page "/"
+@using Syncfusion.Blazor.Cards
+@using Syncfusion.Blazor.Buttons
+
+
+<div class="header">
+
+    <div id="fullLogo">
+        <div id="logoOnly">
+            <img class="divIcon" src="/Assets/dataImageLogoIcon.png" max-width="250" height="250" />
+        </div>
+        <div>
+            <img id="logoWord" src="/Assets/whiteLogo_Word.png" max-width="250" height="250" />
+        </div>
+    </div>
+
+    <div id="headerParagraph">
+        <h3>Reimagine your Datasets with DataImage Clustering Engine</h3>
+        <h6 class="typewriter">Bring Data to life with first-class Visualizations</h6>
+    </div>
+
+
+
+
+</div>
+
+    <div class="section1">
+    <div style="padding-top: 60px; padding-bottom: 60px;">
+        <h3 style="font-weight:bold">
+            Numeric Clustering
+        </h3>
+        <p style="text-align:left;">
+            Tech evangelists are currently pounding their pulpits about all things AI, machine learning, analytics anything that sounds like the future and probably involves lots of numbers. Many of these topics can be grouped under the intimidating term data science.
+        </p>
+        <NavLink class="btn btn-primary btn-sm" href="numeric-clustering" >
+            <span style="color:white" aria-hidden="true">Make Clusters </span>
+        </NavLink>
+    </div>
+
+    <div>
+        <img src="/Assets/MaskedNumericAlgo.png" width="800" height="400" />
+    </div>
+</div>
+
+
+
+<div class="section2">
+    <div>
+        <img src="/Assets/ClusterGlobe (3).png" width="800" height="350" />
+    </div>
+    <div style="padding-top: 60px; padding-bottom: 60px;">
+        <h3 style="font-weight:bold;">
+            Datapoints with Catagorical Dimensions
+        </h3>
+        <p>
+            "Tech evangelists are currently pounding their pulpits about all things
+            AI, machine learning, analytics anything that sounds like the future and
+            probably involves lots of numbers. Many of these topics can be grouped under
+            the intimidating term data science.
+        </p>
+        <NavLink class="btn btn-primary btn-sm" href="categorical-data-clustering">
+            <span style="color:white">Make Clusters</span>
+        </NavLink>
+    </div>
+</div>
+
+
+
+<div class="section3">
+    <div style=" padding-top: 60px;padding-bottom: 60px; padding-left:10px; margin-left:30px;">
+       <h3 style="font-weight:bold">
+            Spatial Datasets
+        </h3>
+        <p>
+            "Tech evangelists are currently pounding their pulpits about all things
+            AI, machine learning, analytics anything that sounds like the future and
+            probably involves lots of numbers. Many of these topics can be grouped under
+            the intimidating term data science.
+        </p>
+        <NavLink class="btn btn-primary btn-sm" href="spatial-data-clustering">
+            <span style="color:white">Make Clusters</span>
+        </NavLink>
+    </div>
+    <div style="margin-right:30px">
+        <img src="/Assets/GIS1.png" max-width="600" height="350"/>
+    </div>
+</div>
+
+
+<div class="section4">
+    <div style="margin-left:30px">
+        <img src="/Assets/Charts.png" max-width="800" height="400"/>
+    </div>
+    <div style="padding-top: 60px; padding-bottom: 60px; ">
+        <h3 style="font-weight:bold">
+            Mixed Data
+        </h3>
+        <p style="margin-right:30px">
+            "Tech evangelists are currently pounding their pulpits about all things
+            AI, machine learning, analytics anything that sounds like the future and
+            probably involves lots of numbers. Many of these topics can be grouped under
+            the intimidating term data science.
+        </p>
+        <NavLink class="btn btn-primary btn-sm" href="mixed-data-clustering" >
+            <span style="color:white">Make Clusters</span>
+        </NavLink>
+    </div>
+</div>
+
+
+<div class="section5">
+        <div style="max-width:inherit; margin-right:70px; padding-top:70px">
+            <TabsFeatures></TabsFeatures>
+        </div>
+        <div style="max-width:inherit; margin-left:70px;">
+            <CardFeatures></CardFeatures>
+
+        </div>
+
+</div>
+
+
+
+
+<style>
+
+
+
+    .typewriter {
+        color: #fff;
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid orange; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: typing 7.5s steps(40, end), blink-caret .5s step-end infinite;
+    }
+
+    /* The typing effect */
+    @@keyframes typing {
+        from {
+            width: 0
+        }
+
+        to {
+            width: 100%
+        }
+    }
+
+    /* The typewriter cursor effect */
+    @@keyframes blink-caret {
+        from, to {
+            border-color: transparent
+        }
+
+        50% {
+            border-color: orange
+        }
+    }
+
+
+
+
+    .header {
+        max-width: 100vw;
+        height: 400px;
+        background-color: #01032f;
+    }
+
+    .buttonNavLink {
+    }
+
+    .section1 {
+        max-width: 100vw;
+        height: 400px;
+        background-color: #ffffff;
+        display: flex;
+    }
+
+    .section2 {
+       max-width: 100vw;
+        height: 400px;
+        background-color: white;
+        display: flex;
+    }
+
+    .section3 {
+        max-width: 100vw;
+        height: 400px;
+        background-color: #ffffff;
+        display: flex;
+    }
+
+    .section4 {
+        max-width: 100vw;
+        height: 400px;
+        background-color: white;
+        display: flex;
+    }
+
+    .section5 {
+        max-width: 100vw;
+        height: 400px;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+    }
+
+
+
+    #fullLogo {
+        height: 65%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    #logoOnly {
+    }
+
+    #logoWord {
+        width: 400px;
+    }
+
+    #headerParagraph {
+        text-align: center;
+        color: white;
+    }
+
+    .divIcon {
+        animation: rotate 3s infinite;
+        animation-timing-function: cubic-bezier(0.05,0.08,.05,0.05);
+    }
+
+
+    @@-webkit-keyframes rotate {
+        from {
+            -webkit-transform: rotate(0deg)
+        }
+
+        to {
+            -webkit-transform: rotate(360deg)
+        }
+    }
+</style>
